@@ -178,6 +178,7 @@ ul {
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-top: 13px;
 }
 
 .main-home section ul li img {

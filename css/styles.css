@@ -5,12 +5,14 @@
 /*╚██████╔╝███████╗╚█████╔╝██████╦╝██║░░██║███████╗  ██████╔╝░░░██║░░░░░░██║░░░███████╗███████╗██████╔╝*/
 /*░╚═════╝░╚══════╝░╚════╝░╚═════╝░╚═╝░░╚═╝╚══════╝  ╚═════╝░░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚══════╝╚═════╝░*/
 
+/******************************************************************
+ * GLOBAL STYLES - All Screen Sizes
+ *****************************************************************/
+
 body {
     background-image: linear-gradient(to right, #f2f2ff 0%, #ecfaff 100%);
     font-family: 'Nunito', sans-serif;
-    padding: 50px 130px;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,6 +29,37 @@ ul {
     --dark-blue: #1c0d59;
     --baby-blue: #e4f1fb;
     --light-blue: #4a90e2;
+}
+
+/******************************************************************
+ * GLOBAL STYLES - MOBILE
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 20px;
+    }
+}
+
+/******************************************************************
+ * GLOBAL STYLES - TABLET
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    body {
+        padding: 50px;
+    }
+}
+
+/******************************************************************
+ * GLOBAL STYLES - DESKTOP
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 50px 130px;
+        max-width: 1200px;
+    }
 }
 
 /*███╗░░██╗░█████╗░██╗░░░██╗██╗░██████╗░░█████╗░████████╗██╗░█████╗░███╗░░██╗*/
@@ -61,10 +94,6 @@ ul {
     text-decoration: none;
 }
 
-.flex-container-resume-top {
-    display: flex;
-}
-
 .nav-flexbox-container {
     display: flex;
     margin-left: auto;
@@ -93,8 +122,6 @@ ul {
     color: var(--light-blue);
 }
 
-
-
 .full-stack-developer {
     margin-top: 100px;
     color: var(--dark-blue);
@@ -106,23 +133,30 @@ ul {
     margin-bottom: 50px;
 }
 
+
+/*██╗░░██╗░█████╗░███╗░░░███╗███████╗*/
+/*██║░░██║██╔══██╗████╗░████║██╔════╝*/
+/*███████║██║░░██║██╔████╔██║█████╗░░*/
+/*██╔══██║██║░░██║██║╚██╔╝██║██╔══╝░░*/
+/*██║░░██║╚█████╔╝██║░╚═╝░██║███████╗*/
+/*╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝*/
+
+/******************************************************************
+ * Home Page - All Screen Sizes
+ *****************************************************************/
+
 .main-home {
     background-color: var(--white);
     width: inherit;
     margin: 0 auto;
-    padding: 80px;
     border-radius: 14px;
 }
 
 .img {
     display: block;
-    margin-bottom: 30px;
-    width: 250px;
-    height: 250px;
 }
 
 .h1-home {
-    height: 57px;
     color: var(--dark-blue);
     font-weight: 600;
 }
@@ -130,7 +164,6 @@ ul {
 .heading-subtitle-home {
     display: block;
     color: var(--dark-blue);
-    font-size: 20px;
     font-weight: 200;
     margin-bottom: 20px;
 }
@@ -152,14 +185,12 @@ ul {
 }
 
 .main-home section h2 {
-    font-size: 24px;
     font-weight: 600;
     color: var(--dark-blue);
     margin-top: 40px;
 }
 
 .main-home section p {
-    font-size: 20px;
     color: var(--dark-blue);
     font-weight: 200;
 }
@@ -193,3 +224,113 @@ ul {
 .main-home section ul li img {
     padding-right: 20px;
 }
+
+/******************************************************************
+ * Home Page - Mobile Screens
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+    .main-home {
+        padding: 30px;
+    }
+
+    .img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .h1-home {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .heading-subtitle-home {
+        font-size: 12px;
+    }
+
+    .icons-home li a img {
+        height: 30px;
+    }
+
+    .main-home section h2 {
+        font-size: 14px;
+    }
+
+    .main-home section p {
+        font-size: 14px;
+    }
+
+    .main-home section li img {
+        height: 30px;
+    }
+
+    .main-home section li a {
+        font-size: 12px;
+    }
+}
+
+/******************************************************************
+ * Home Page - Tablet Screens
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .h1-home {
+        font-size: 24px;
+    }
+
+    .main-home {
+        padding: 50px;
+    }
+
+    .img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .main-home section h2 {
+        font-size: 24px;
+    }
+
+}
+
+/******************************************************************
+ * Home Page - Desktop Screens
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+    .main-home {
+        padding: 80px;
+    }
+
+    .img {
+        margin-bottom: 30px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .h1-home {
+        font-size: 42px;
+    }
+
+    .heading-subtitle-home {
+        font-size: 20px;
+    }
+
+    .main-home section h2 {
+        font-size: 24px;
+    }
+
+    .main-home section p {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+

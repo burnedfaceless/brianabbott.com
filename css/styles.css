@@ -9,6 +9,8 @@ body {
     background-image: linear-gradient(to right, #f2f2ff 0%, #ecfaff 100%);
     font-family: 'Nunito', sans-serif;
     padding: 50px 130px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +20,13 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     padding: 0;
     margin: 0;
+}
+
+:root {
+    --white: #fff;
+    --dark-blue: #1c0d59;
+    --baby-blue: #e4f1fb;
+    --light-blue: #4a90e2;
 }
 
 /*███╗░░██╗░█████╗░██╗░░░██╗██╗░██████╗░░█████╗░████████╗██╗░█████╗░███╗░░██╗*/
@@ -33,7 +42,7 @@ ul {
 
 .nav-home-link {
     font-size: 24px;
-    color: #1c0d59;
+    color: var(--dark-blue);
     font-weight: 600;
     text-decoration: none;
 }
@@ -45,7 +54,7 @@ ul {
 .nav-left {
     font-size: 26px;
     font-weight: 600;
-    color: #1c0d59;
+    color: var(--dark-blue);
 }
 
 .nav-left a {
@@ -77,19 +86,19 @@ ul {
 }
 
 .nav-item-inactive a {
-    color: #1c0d59;
+    color: var(--dark-blue);
 }
 
 .nav-item-active a {
-    color: #4a90e2;
+    color: var(--light-blue);
 }
 
 
 
 .full-stack-developer {
     margin-top: 100px;
-    color: #1c0d59;
-    border-left: solid 4px #4a90e2;
+    color: var(--dark-blue);
+    border-left: solid 4px var(--light-blue);
     display: block;
     padding-left: 20px;
     font-size: 14px;
@@ -98,7 +107,7 @@ ul {
 }
 
 .main-home {
-    background-color: #fff;
+    background-color: var(--white);
     width: inherit;
     margin: 0 auto;
     padding: 80px;
@@ -114,13 +123,13 @@ ul {
 
 .h1-home {
     height: 57px;
-    color: #1c0d59;
+    color: var(--dark-blue);
     font-weight: 600;
 }
 
 .heading-subtitle-home {
     display: block;
-    color: #1c0d59;
+    color: var(--dark-blue);
     font-size: 20px;
     font-weight: 200;
     margin-bottom: 20px;
@@ -138,20 +147,20 @@ ul {
 .line {
     width: 100%;
     height: 1px;
-    border-top: solid 2px #e4f1fb;
+    border-top: solid 2px var(--baby-blue);
     margin-top: 40px;
 }
 
 .main-home section h2 {
     font-size: 24px;
     font-weight: 600;
-    color: #1c0d59;
+    color: var(--dark-blue);
     margin-top: 40px;
 }
 
 .main-home section p {
     font-size: 20px;
-    color: #1c0d59;
+    color: var(--dark-blue);
     font-weight: 200;
 }
 
@@ -164,14 +173,14 @@ ul {
 }
 
 .main-home section a {
-    color: #1c0d59;
+    color: var(--dark-blue);
     font-weight: 600;
     text-decoration: none;
 }
 
-.main-home section a:hover {
+.main-home section a:hover, .main-home section a:target {
     text-decoration: underline;
-    color: #1c0d59;
+    color: var(--dark-blue);
 }
 
 .main-home section ul li {

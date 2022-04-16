@@ -65,7 +65,7 @@
     <section class="personal">
       <h2>Personal</h2>
       <p>
-        I just adopted a Golden Retriever puppy, named Lee. One day I would like to create a platform to teach music
+        I just adopted a <span id="age"></span> month old Golden Retriever puppy, named Lee. One day I would like to create a platform to teach music
         theory, composition and arranging. I look forward to meeting some people who are optimistic, willing and able
         to put some time into creating a platform for this underserved niche.
       </p>
@@ -84,5 +84,19 @@
     </section>
   </main>
   <script src="js/scripts.js"></script>
+  <script>
+
+    const getMonthDifference = (startDate, endDate) => {
+      return (
+          endDate.getMonth() -
+          startDate.getMonth() +
+          12 * (endDate.getFullYear() - startDate.getFullYear())
+      )
+    }
+
+    const ageOfLee = getMonthDifference(new Date('2022-01-22'), new Date()).toString()
+    
+    document.querySelector('#age').innerHTML = ageOfLee
+  </script>
 </body>
 </html>

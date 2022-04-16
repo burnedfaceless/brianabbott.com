@@ -135,6 +135,8 @@ ul {
 
     .nav-flexbox-container {
         flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
     }
 
     .full-stack-developer {
@@ -184,6 +186,8 @@ ul {
 
     .nav-flexbox-container {
         flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
     }
 
     .full-stack-developer {

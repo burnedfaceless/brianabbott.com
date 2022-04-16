@@ -69,12 +69,15 @@ ul {
 /*██║░╚███║██║░░██║░░╚██╔╝░░██║╚██████╔╝██║░░██║░░░██║░░░██║╚█████╔╝██║░╚███║*/
 /*╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝*/
 
+/******************************************************************
+ * NAVIGATION - All Screen Sizes
+ *****************************************************************/
+
 .navigation {
     display: flex;
 }
 
 .nav-home-link {
-    font-size: 24px;
     color: var(--dark-blue);
     font-weight: 600;
     text-decoration: none;
@@ -84,29 +87,17 @@ ul {
     text-decoration: underline;
 }
 
-.nav-left {
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--dark-blue);
-}
-
-.nav-left a {
-    text-decoration: none;
-}
-
-.nav-flexbox-container {
-    display: flex;
-    margin-left: auto;
-}
-
 .nav-item {
     list-style: none;
     padding-left: 60px;
 }
 
+.nav-flexbox-container {
+    display: flex;
+}
+
 .nav-item a {
     text-decoration: none;
-    font-size: 14px;
     font-weight: 600;
 }
 
@@ -128,11 +119,129 @@ ul {
     border-left: solid 4px var(--light-blue);
     display: block;
     padding-left: 20px;
-    font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 50px;
 }
 
+/******************************************************************
+ * NAVIGATION - MOBILE
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+
+    .nav-home-link {
+        font-size: 20px;
+    }
+
+    .nav-flexbox-container {
+        flex-direction: column;
+    }
+
+    .full-stack-developer {
+        font-size: 11px;
+    }
+
+    #side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #ccc;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .hamburger-menu {
+        width: 21px;
+        height: 16px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .sidenav .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+}
+
+/******************************************************************
+ * NAVIGATION - TABLET
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .nav-home-link {
+        font-size: 24px;
+    }
+
+    .nav-flexbox-container {
+        flex-direction: column;
+    }
+
+    .full-stack-developer {
+        font-size: 14px;
+    }
+
+    #side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #ccc;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .hamburger-menu {
+        width: 26px;
+        height: 20px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+}
+
+/******************************************************************
+ * NAVIGATION - DESKTOP
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+
+    .nav-home-link {
+        font-size: 24px;
+    }
+
+    .nav-flexbox-container {
+        margin-left: auto;
+    }
+
+    .nav-item a {
+        font-size: 14px;
+    }
+
+    #side-nav {
+        margin-left: auto;
+    }
+
+    .full-stack-developer {
+        font-size: 14px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
 
 /*██╗░░██╗░█████╗░███╗░░░███╗███████╗*/
 /*██║░░██║██╔══██╗████╗░████║██╔════╝*/

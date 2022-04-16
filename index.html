@@ -15,11 +15,14 @@
   <header>
     <nav class="navigation">
       <a class="nav-home-link" href="https://brianabbott.com">Brian Abbott</a>
-      <ul class="nav-flexbox-container">
-        <li class="nav-item nav-item-inactive"><a href="https://blog.brianabbott.com">BLOG</a></li>
-        <li class="nav-item nav-item-inactive"><a href="https://brianabbott.com/resume.pdf">RESUME</a></li>
-        <li class="nav-item nav-item-inactive"><a href="#">PROJECTS</a></li>
-      </ul>
+      <img class="hamburger-menu" src="images/hamburger-menu.png" alt="toggle menu" onclick="openNav()">
+      <div id="side-nav">
+        <ul class="nav-flexbox-container">
+          <li class="nav-item nav-item-inactive"><a href="https://blog.brianabbott.com">BLOG</a></li>
+          <li class="nav-item nav-item-inactive"><a href="https://brianabbott.com/resume.pdf">RESUME</a></li>
+          <li class="nav-item nav-item-inactive"><a href="#">PROJECTS</a></li>
+        </ul>
+      </div>
     </nav>
     <span class="full-stack-developer">Full Stack Developer</span>
   </header>
@@ -76,5 +79,6 @@
       </ul>
     </section>
   </main>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

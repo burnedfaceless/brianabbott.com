@@ -87,11 +87,12 @@
   <script>
 
     const getMonthDifference = (startDate, endDate) => {
-      return (
-          endDate.getMonth() -
-          startDate.getMonth() +
-          12 * (endDate.getFullYear() - startDate.getFullYear())
-      )
+      let numberOfMonths = endDate.getMonth() - startDate.getMonth()
+      numberOfMonths += 12 * (endDate.getFullYear() - startDate.getFullYear())
+      if (endDate.getDate() < startDate.getDate()) {
+        numberOfMonths -= 1
+      }
+      return numberOfMonths
     }
 
     const ageOfLee = getMonthDifference(new Date('2022-01-22'), new Date()).toString()

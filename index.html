@@ -90,7 +90,7 @@
       let numberOfMonths = endDate.getMonth() - startDate.getMonth()
       numberOfMonths += 12 * (endDate.getFullYear() - startDate.getFullYear())
       if (endDate.getDate() < startDate.getDate()) {
-        numberOfMonths -= 1
+        numberOfMonths --
       }
       return numberOfMonths
     }

@@ -157,10 +157,12 @@ ul {
     }
 
     .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .hamburger-menu img {
         width: 21px;
         height: 16px;
-        margin-left: auto;
-        cursor: pointer;
     }
 
     .sidenav .close-btn {
@@ -208,10 +210,12 @@ ul {
     }
 
     .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .hamburger-menu img {
         width: 26px;
         height: 20px;
-        margin-left: auto;
-        cursor: pointer;
     }
 
 }

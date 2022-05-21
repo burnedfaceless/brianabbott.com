@@ -65,7 +65,7 @@
     <section class="miscellaneous">
       <h2>Miscellaneous</h2>
       <p>
-        I just adopted a <span id="age"></span> month old Golden Retriever puppy, named Lee. One day I would like to create a platform to teach music
+        I have a Golden Retriever puppy named Lee who is <span id="age"></span> old. One day I would like to create a platform to teach music
         theory, composition and arranging. I look forward to meeting some people who are optimistic, willing and able
         to put some time into creating a platform for this underserved niche.
       </p>
@@ -92,12 +92,48 @@
       if (endDate.getDate() < startDate.getDate()) {
         numberOfMonths --
       }
+      if (numberOfMonths === 0) {
+        numberOfMonths++
+      }
       return numberOfMonths
     }
 
-    const ageOfLee = getMonthDifference(new Date('2022-01-22'), new Date()).toString()
+    const formatNumberOfMonths = numOfMonths => {
+      if (numOfMonths === 1 || numOfMonths === 0) {
+        return '1 month'
+      } else if (numOfMonths > 1) {
+        return `${numOfMonths} months`
+      }
+    }
 
-    document.querySelector('#age').innerHTML = ageOfLee
+    const formatNumberOfYears = numOfYears => {
+      if (numOfYears === 1) {
+        return `1 year`
+      } else if (numOfYears > 1) {
+        return `${numOfYears} years`
+      }
+    }
+
+    const generateFormattedAge = numOfMonths => {
+      const years = Math.floor(numOfMonths / 12)
+      if (years < 1) {
+        return formatNumberOfMonths(numOfMonths)
+      } else {
+        const months = numOfMonths % 12
+        const yearsFormatted = formatNumberOfYears(years)
+        if (months > 0) {
+          const monthsFormatted = formatNumberOfMonths(months)
+          return `${yearsFormatted}, ${monthsFormatted}`
+        } else {
+          return yearsFormatted
+        }
+      }
+    }
+
+    const ageOfLeeInMonths = getMonthDifference(new Date('2022-01-22'), new Date())
+    const formattedAgeOfLee = generateFormattedAge(ageOfLeeInMonths)
+
+    document.querySelector('#age').textContent = formattedAgeOfLee
   </script>
 </body>
 </html>

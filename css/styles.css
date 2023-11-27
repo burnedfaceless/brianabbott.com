@@ -1,0 +1,456 @@
+/*░██████╗░██╗░░░░░░█████╗░██████╗░░█████╗░██╗░░░░░  ░██████╗████████╗██╗░░░██╗██╗░░░░░███████╗░██████╗*/
+/*██╔════╝░██║░░░░░██╔══██╗██╔══██╗██╔══██╗██║░░░░░  ██╔════╝╚══██╔══╝╚██╗░██╔╝██║░░░░░██╔════╝██╔════╝*/
+/*██║░░██╗░██║░░░░░██║░░██║██████╦╝███████║██║░░░░░  ╚█████╗░░░░██║░░░░╚████╔╝░██║░░░░░█████╗░░╚█████╗░*/
+/*██║░░╚██╗██║░░░░░██║░░██║██╔══██╗██╔══██║██║░░░░░  ░╚═══██╗░░░██║░░░░░╚██╔╝░░██║░░░░░██╔══╝░░░╚═══██╗*/
+/*╚██████╔╝███████╗╚█████╔╝██████╦╝██║░░██║███████╗  ██████╔╝░░░██║░░░░░░██║░░░███████╗███████╗██████╔╝*/
+/*░╚═════╝░╚══════╝░╚════╝░╚═════╝░╚═╝░░╚═╝╚══════╝  ╚═════╝░░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚══════╝╚═════╝░*/
+
+/******************************************************************
+ * GLOBAL STYLES - All Screen Sizes
+ *****************************************************************/
+
+body {
+    background-image: linear-gradient(to right, #f2f2ff 0%, #ecfaff 100%);
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white: #fff;
+    --dark-blue: #1c0d59;
+    --baby-blue: #e4f1fb;
+    --light-blue: #4a90e2;
+}
+
+/******************************************************************
+ * GLOBAL STYLES - MOBILE
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 20px;
+    }
+}
+
+/******************************************************************
+ * GLOBAL STYLES - TABLET
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    body {
+        padding: 50px;
+    }
+}
+
+/******************************************************************
+ * GLOBAL STYLES - DESKTOP
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 50px 130px;
+        max-width: 1200px;
+    }
+}
+
+/*███╗░░██╗░█████╗░██╗░░░██╗██╗░██████╗░░█████╗░████████╗██╗░█████╗░███╗░░██╗*/
+/*████╗░██║██╔══██╗██║░░░██║██║██╔════╝░██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║*/
+/*██╔██╗██║███████║╚██╗░██╔╝██║██║░░██╗░███████║░░░██║░░░██║██║░░██║██╔██╗██║*/
+/*██║╚████║██╔══██║░╚████╔╝░██║██║░░╚██╗██╔══██║░░░██║░░░██║██║░░██║██║╚████║*/
+/*██║░╚███║██║░░██║░░╚██╔╝░░██║╚██████╔╝██║░░██║░░░██║░░░██║╚█████╔╝██║░╚███║*/
+/*╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝*/
+
+/******************************************************************
+ * NAVIGATION - All Screen Sizes
+ *****************************************************************/
+
+.navigation {
+    display: flex;
+}
+
+.nav-home-link {
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-home-link:hover, .nav-home-link:target {
+    text-decoration: underline;
+}
+
+.nav-item {
+    list-style: none;
+    padding-left: 60px;
+}
+
+.nav-flexbox-container {
+    display: flex;
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-item a:hover, .nav-item a:target {
+    text-decoration: underline;
+}
+
+.nav-item-inactive a {
+    color: var(--dark-blue);
+}
+
+.nav-item-active a {
+    color: var(--light-blue);
+}
+
+.full-stack-developer {
+    margin-top: 100px;
+    color: var(--dark-blue);
+    border-left: solid 4px var(--light-blue);
+    display: block;
+    padding-left: 20px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/******************************************************************
+ * NAVIGATION - MOBILE
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+
+    .nav-home-link {
+        font-size: 20px;
+    }
+
+    .nav-flexbox-container {
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
+    }
+
+    .full-stack-developer {
+        font-size: 11px;
+    }
+
+    #side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #ccc;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .hamburger-menu img {
+        width: 21px;
+        height: 16px;
+    }
+
+    .sidenav .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+}
+
+/******************************************************************
+ * NAVIGATION - TABLET
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .nav-home-link {
+        font-size: 24px;
+    }
+
+    .nav-flexbox-container {
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
+    }
+
+    .full-stack-developer {
+        font-size: 14px;
+    }
+
+    #side-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #ccc;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .hamburger-menu {
+        margin-left: auto;
+    }
+
+    .hamburger-menu img {
+        width: 26px;
+        height: 20px;
+    }
+
+}
+
+/******************************************************************
+ * NAVIGATION - DESKTOP
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+
+    .nav-home-link {
+        font-size: 24px;
+    }
+
+    .nav-flexbox-container {
+        margin-left: auto;
+    }
+
+    .nav-item a {
+        font-size: 14px;
+    }
+
+    #side-nav {
+        margin-left: auto;
+    }
+
+    .full-stack-developer {
+        font-size: 14px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/*██╗░░██╗░█████╗░███╗░░░███╗███████╗*/
+/*██║░░██║██╔══██╗████╗░████║██╔════╝*/
+/*███████║██║░░██║██╔████╔██║█████╗░░*/
+/*██╔══██║██║░░██║██║╚██╔╝██║██╔══╝░░*/
+/*██║░░██║╚█████╔╝██║░╚═╝░██║███████╗*/
+/*╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝╚══════╝*/
+
+/******************************************************************
+ * Home Page - All Screen Sizes
+ *****************************************************************/
+
+.main-home {
+    background-color: var(--white);
+    width: inherit;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+
+.img {
+    display: block;
+}
+
+.h1-home {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.heading-subtitle-home {
+    display: block;
+    color: var(--dark-blue);
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.icons-home {
+    display: flex;
+}
+
+.icons-home li {
+    list-style: none;
+    padding-right: 16px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-top: solid 2px var(--baby-blue);
+    margin-top: 40px;
+}
+
+.main-home section h2 {
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-top: 40px;
+}
+
+.main-home section p {
+    color: var(--dark-blue);
+    font-weight: 200;
+}
+
+.contact li {
+    list-style: none;
+}
+
+.main-home section ul {
+    margin-top: 20px;
+}
+
+.main-home section a {
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-home section a:hover, .main-home section a:target {
+    text-decoration: underline;
+    color: var(--dark-blue);
+}
+
+.main-home section ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.main-home section ul li img {
+    padding-right: 20px;
+}
+
+/******************************************************************
+ * Home Page - Mobile Screens
+ *****************************************************************/
+
+@media screen and (max-width: 767px) {
+    .main-home {
+        padding: 30px;
+    }
+
+    .img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        border-radius: 24px;
+    }
+
+    .h1-home {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .heading-subtitle-home {
+        font-size: 12px;
+    }
+
+    .icons-home li a img {
+        height: 30px;
+    }
+
+    .main-home section h2 {
+        font-size: 14px;
+    }
+
+    .main-home section p {
+        font-size: 14px;
+    }
+
+    .main-home section li img {
+        height: 30px;
+    }
+
+    .main-home section li a {
+        font-size: 12px;
+    }
+}
+
+/******************************************************************
+ * Home Page - Tablet Screens
+ *****************************************************************/
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .h1-home {
+        font-size: 24px;
+    }
+
+    .main-home {
+        padding: 50px;
+    }
+
+    .img {
+        width: 170px;
+        height: 170px;
+        border-radius: 24px;
+    }
+
+    .main-home section h2 {
+        font-size: 24px;
+    }
+
+}
+
+/******************************************************************
+ * Home Page - Desktop Screens
+ *****************************************************************/
+
+@media screen and (min-width: 1200px) {
+    .main-home {
+        padding: 80px;
+    }
+
+    .img {
+        margin-bottom: 30px;
+        width: 250px;
+        height: 250px;
+        border-radius: 24px;
+    }
+
+    .h1-home {
+        font-size: 42px;
+    }
+
+    .heading-subtitle-home {
+        font-size: 20px;
+    }
+
+    .main-home section h2 {
+        font-size: 24px;
+    }
+
+    .main-home section p {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+

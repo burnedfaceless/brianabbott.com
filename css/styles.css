@@ -352,7 +352,6 @@ ul {
     }
 
     .img {
-        width: 150px;
         height: 150px;
         margin-bottom: 20px;
         border-radius: 24px;
@@ -402,7 +401,6 @@ ul {
     }
 
     .img {
-        width: 170px;
         height: 170px;
         border-radius: 24px;
     }
@@ -424,7 +422,6 @@ ul {
 
     .img {
         margin-bottom: 30px;
-        width: 250px;
         height: 250px;
         border-radius: 24px;
     }
